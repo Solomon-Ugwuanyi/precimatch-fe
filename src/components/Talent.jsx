@@ -1,22 +1,9 @@
 import React, { Component } from 'react';
 import './home.css';
-import { Row, Col, Card, Button } from 'react-bootstrap'
+import { Row, Col, Image } from 'react-bootstrap'
 import { Link, withRouter } from 'react-router-dom'
 
-class Home extends Component {
-
-    state = {
-        talents: []
-    }
-
-
-    componentDidMount = async () => {
-        const response = await fetch('http://localhost:4500/talents')
-        const data = await response.json();
-        this.setState({ talents: data })
-    }
-
-
+class Talent extends Component {
 
     render() {
         return (
@@ -29,7 +16,7 @@ class Home extends Component {
                                     <h4 className="text-white">About</h4>
                                     <p className="text-muted">Add some information about the album below, the author, or any other background
                                     context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off
-                      to some social networking sites or contact information.</p>
+                  to some social networking sites or contact information.</p>
                                 </div>
                                 <div className="col-sm-4 offset-md-1 py-4">
                                     <h4 className="text-white">Contact</h4>
@@ -44,7 +31,7 @@ class Home extends Component {
                     </div>
                     <div className="navbar navbar-dark bg-dark shadow-sm">
                         <div className="container d-flex justify-content-between">
-                            <a href="#" className="navbar-brand d-flex align-items-center">
+                            <a href="https://navigable.com" className="navbar-brand d-flex align-items-center">
                                 <svg src="https://icon-library.com/images/precision-icon/precision-icon-29.jpg" width="30" height="20" fill="none" stroke="currentColor"
                                     stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" className="mr-2"
                                     viewBox="0 0 24 24" focusable="false">
@@ -71,35 +58,37 @@ class Home extends Component {
                                 <a href="#" className="btn btn-secondary my-2">Sign Up</a>
                             </p>
                         </div>
-                    </section>
+                    </section> {/* Header/Jumbotron End */}
 
                     <div className="album py-5 bg-light">
                         <div className="container">
-                            <Row >
-                                {this.state.talents.map((talent) => (
-                                    <Col key={talent._id} xs={12} sm={6} md={4} lg={3}>
-                                        <Card height={24}>
-                                            <Card.Img variant="top" src={talent.imageUrl} />
-                                            <Card.Body>
-                                                <Card.Title>{talent.name} {talent.surname}</Card.Title>
-                                                <h2>{talent.headline}</h2>
-                                                <Card.Text>{talent.aboutMe}
-                                                </Card.Text>
-                                                <Link style={{ border: 'none', background: '#008001', color: '#fff', fontSize: '14px' }} className="btn btn-primary" to={`/talent/${talent._id}`}>
-                                                    Review Details
-                                                </Link>
-                                            </Card.Body>
-                                        </Card>
-                                    </Col>
-                                ))}
+                            <Row>
+                                <Col xs={6} md={3} style={{ display: 'inline-block' }} >
+                                    <Image src="https://cvmedici.humanitas.it/uploads/doctors/stefano_miceli/stefano_miceli_img_profile.jpg" rounded />
+                                </Col>
+                                <Col xs={6} md={6}>
+                                    <p className="half">
+                                        Loremm ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    </p>
+
+                                </Col>
+                                <Col xs={6} md={3}>
+                                    <p className="three-quarters">
+                                        Loremm ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    </p>
+                                </Col>
                             </Row>
+
+
+
+
 
 
                         </div>
                     </div>
 
                 </main>
-
+                {/* Footer Start End */}
                 <footer className="text-muted">
                     <div className="container">
                         <p className="float-right">
@@ -110,9 +99,9 @@ class Home extends Component {
                             href="../getting-started/introduction/">getting started guide</a>.</p>
                     </div>
                 </footer>
-            </div>
+            </div >
         );
     }
 }
 
-export default withRouter(Home);
+export default Talent;

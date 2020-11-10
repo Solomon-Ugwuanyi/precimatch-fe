@@ -55,14 +55,17 @@
 
   }
 
-  .fixed-header{
-    
-    position: fixed;
-   
-    padding: 10px 0;}
+  .half {
+    float: left;
+    width: 100%;
+    margin: 10px;
+    padding-left: 8rem;
+}
 
-    .fixed-header{
-        top: 0;    
-        }
-           
-   
+.three-quarters {
+    float: left;
+    width: 100%;
+    margin: 10px;
+    
+}
+ 
