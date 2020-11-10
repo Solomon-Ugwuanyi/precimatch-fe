@@ -20,7 +20,7 @@ class Home extends Component {
     render() {
         return (
             <div style={{ backgroundImage: `url("https://cdn.hipwallpaper.com/m/85/71/LSka14.jpg")` }}>
-                <header>
+                <header className="fixed-header">
                     <div className="collapse bg-dark" id="navbarHeader">
                         <div className="container">
                             <div className="row">
@@ -65,9 +65,9 @@ class Home extends Component {
                             <h1>Precise Matches</h1>
                             <h5>Tinder for Developer Jobs</h5>
                             <p className="lead text-muted">Scan through a carefully curated directory of job ready developers, equipped with industry best practices and latest stacks. See some projects you like? Shoot them an email!</p>
-                            <p>
-                                <a href="#" className="btn btn-primary my-2">Main call to action</a>
-                                <a href="#" className="btn btn-secondary my-2">Secondary action</a>
+                            <p spacing="30px">
+                                <a href="#" className="btn btn-primary my-2">Sign In</a>
+                                <a href="#" className="btn btn-secondary my-2">Sign Up</a>
                             </p>
                         </div>
                     </section>
