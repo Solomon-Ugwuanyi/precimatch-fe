@@ -62,8 +62,9 @@ class Home extends Component {
 
                     <section className="jumbotron text-center">
                         <div className="container">
-                            <h1>Developer Directory</h1>
-                            <p className="lead text-muted">Scan through a carefully curated directory of job ready developers with equipped with industry best practices and latest stacks</p>
+                            <h1>Precise Matches</h1>
+                            <h5>Tinder for Developer Jobs</h5>
+                            <p className="lead text-muted">Scan through a carefully curated directory of job ready developers, equipped with industry best practices and latest stacks. See some projects you like? Shoot them an email!</p>
                             <p>
                                 <a href="#" className="btn btn-primary my-2">Main call to action</a>
                                 <a href="#" className="btn btn-secondary my-2">Secondary action</a>
@@ -80,6 +81,7 @@ class Home extends Component {
                                             <Card.Img variant="top" src={talent.imageUrl} />
                                             <Card.Body>
                                                 <Card.Title>{talent.name} {talent.surname}</Card.Title>
+                                                <h2>{talent.headline}</h2>
                                                 <Card.Text>{talent.aboutMe}
                                                 </Card.Text>
                                                 <Button variant="primary">View Details</Button>
