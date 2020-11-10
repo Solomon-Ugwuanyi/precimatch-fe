@@ -63,23 +63,34 @@ class Talent extends Component {
                     <div className="album py-5 bg-light">
                         <div className="container">
                             <Row>
-                                <Col xs={6} md={3} style={{ display: 'inline-block' }} >
+                                <Col xs={12} sm={6} md={3} style={{ display: 'inline-block' }} >
                                     <Image src="https://cvmedici.humanitas.it/uploads/doctors/stefano_miceli/stefano_miceli_img_profile.jpg" rounded />
                                 </Col>
-                                <Col xs={6} md={6}>
+                                <Col xs={12} sm={6} md={6}>
                                     <p className="half">
                                         Loremm ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                     </p>
 
                                 </Col>
-                                <Col xs={6} md={3}>
+                                <Col xs={12} sm={6} md={3}>
                                     <p className="three-quarters">
                                         Loremm ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                     </p>
                                 </Col>
                             </Row>
 
-
+                            <h1 className="section-header">My Portfolio</h1>
+                            <Row>
+                                <Col className="project-pic" xs={12} sm={6} md={4} >
+                                    <Image width={292} height={336} src="https://blog.tubebuddy.com/image.axd?picture=/YT%20News/hp1.png" rounded />
+                                </Col>
+                                <Col className="project-pic" xs={12} sm={6} md={4} >
+                                    <Image width={292} height={336} src="https://thelinkedinman.com/wp-content/uploads/2015/02/new-homepage-image-2.jpg" rounded />
+                                </Col>
+                                <Col className="project-pic" xs={12} sm={6} md={4} >
+                                    <Image width={292} height={336} src="https://i.ytimg.com/vi/w5GQcHxJH1w/maxresdefault.jpg" rounded />
+                                </Col>
+                            </Row>
 
 
 
