@@ -19,7 +19,7 @@ class Home extends Component {
 
     render() {
         return (
-            <div>
+            <div style={{ backgroundImage: `url("https://cdn.hipwallpaper.com/m/85/71/LSka14.jpg")` }}>
                 <header>
                     <div className="collapse bg-dark" id="navbarHeader">
                         <div className="container">
@@ -44,10 +44,9 @@ class Home extends Component {
                     <div className="navbar navbar-dark bg-dark shadow-sm">
                         <div className="container d-flex justify-content-between">
                             <a href="#" className="navbar-brand d-flex align-items-center">
-                                <svg xmlns="https://icon-library.com/images/precision-icon/precision-icon-29.jpg" width="20" height="20" fill="none" stroke="currentColor"
+                                <svg src="https://icon-library.com/images/precision-icon/precision-icon-29.jpg" width="30" height="20" fill="none" stroke="currentColor"
                                     stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" className="mr-2"
                                     viewBox="0 0 24 24" focusable="false">
-                                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
                                     <circle cx="12" cy="13" r="4" /></svg>
                                 <strong>Precimatch</strong>
                             </a>
@@ -63,9 +62,8 @@ class Home extends Component {
 
                     <section className="jumbotron text-center">
                         <div className="container">
-                            <h1>Album example</h1>
-                            <p className="lead text-muted">Something short and leading about the collection below—its contents, the creator,
-                  etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+                            <h1>Developer Directory</h1>
+                            <p className="lead text-muted">Scan through a carefully curated directory of job ready developers with equipped with industry best practices and latest stacks</p>
                             <p>
                                 <a href="#" className="btn btn-primary my-2">Main call to action</a>
                                 <a href="#" className="btn btn-secondary my-2">Secondary action</a>
