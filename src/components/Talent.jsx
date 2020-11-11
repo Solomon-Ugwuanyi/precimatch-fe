@@ -4,8 +4,28 @@ import { Row, Col, Image } from 'react-bootstrap'
 import { Link, withRouter } from 'react-router-dom'
 
 class Talent extends Component {
+    state = {
+        talent: {},
+        projects: []
+    }
+
+
+
+    componentDidMount = async () => {
+        const id = this.props.match.params.id
+        const response = await fetch(`${process.env.REACT_APP_URL}/talents/${id}`)
+        const talent = await response.json()
+        this.setState({ talent })
+
+
+        const res = await fetch(`${process.env.REACT_APP_URL}/talents/${id}/projects`)
+        const projects = await res.json()
+        this.setState({ projects })
+    }
 
     render() {
+        console.log("talent detals from talent page", this.state.talent)
+        console.log("projects detals from talent page", this.state.projects)
         return (
             <div style={{ backgroundImage: `url("https://cdn.hipwallpaper.com/m/85/71/LSka14.jpg")` }}>
                 <header>
@@ -64,7 +84,7 @@ class Talent extends Component {
                         <div className="container">
                             <Row>
                                 <Col xs={12} sm={6} md={3} style={{ display: 'inline-block' }} >
-                                    <Image src="https://cvmedici.humanitas.it/uploads/doctors/stefano_miceli/stefano_miceli_img_profile.jpg" rounded />
+                                    <Image src={this.state.talent.imageUrl} rounded />
                                 </Col>
                                 <Col xs={12} sm={6} md={6}>
                                     <p className="half">
@@ -80,16 +100,20 @@ class Talent extends Component {
                             </Row>
 
                             <h1 className="section-header">My Portfolio</h1>
-                            <Row>
-                                <Col className="project-pic" xs={12} sm={6} md={4} >
-                                    <Image width={292} height={336} src="https://blog.tubebuddy.com/image.axd?picture=/YT%20News/hp1.png" rounded />
-                                </Col>
-                                <Col className="project-pic" xs={12} sm={6} md={4} >
-                                    <Image width={292} height={336} src="https://thelinkedinman.com/wp-content/uploads/2015/02/new-homepage-image-2.jpg" rounded />
-                                </Col>
-                                <Col className="project-pic" xs={12} sm={6} md={4} >
-                                    <Image width={292} height={336} src="https://i.ytimg.com/vi/w5GQcHxJH1w/maxresdefault.jpg" rounded />
-                                </Col>
+
+                            <Row className="portfolio-section" >
+                                {this.state.projects.map((project, i) => {
+                                    return (
+                                        <>
+                                            <Col key={i} xs={12} sm={6} md={4} >
+
+                                                <Image width={292} height={336} src={project.projectImageUrl} rounded />
+                                            </Col>
+                                        </>
+                                    )
+
+                                })}
+
                             </Row>
 
 

@@ -91,3 +91,7 @@
     transform: scale(1.05)
 }
 
+.portfolio-section {
+    border-collapse: separate;
+    border-spacing: 15px 50px;
+}
