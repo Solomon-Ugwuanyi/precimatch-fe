@@ -4,9 +4,9 @@ import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-boots
 export default function MyNav() {
     return (
         <div>
-            <Navbar bg="dark" expand="lg">
+            <Navbar className="bg-dark" expand="lg">
                 <div className="container">
-                    <Navbar.Brand style={{ color: 'white' }} href="#home"><strong>PreciMatch</strong></Navbar.Brand>
+                    <Navbar.Brand style={{ color: 'white' }} href="#home"><img src="././assets/logo1.png"></img><strong>PreciMatch</strong></Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto ">
@@ -14,7 +14,7 @@ export default function MyNav() {
                             <Nav.Link href="#link">Talents</Nav.Link>
                         </Nav>
                         <Form inline>
-                            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+                            <FormControl type="text" placeholder="Search" className="mr-sm-3" />
                             <Button variant="outline-success">Search</Button>
                         </Form>
                     </Navbar.Collapse>

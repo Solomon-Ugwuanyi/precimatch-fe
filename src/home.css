@@ -3,11 +3,22 @@ body {
   font-family: 'Poppins', 'Helvetica', 'Arial', sans-serif;
 }
 
+.bg-dark {
+  background-color: #201547 !important;
+}
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+
 .jumbotron {
     padding-top: 3rem;
     padding-bottom: 3rem;
     margin-bottom: 0;
-    background-color: #fff;
+    background-color: #0e0824;;
   }
   @media (min-width: 768px) {
     .jumbotron {
@@ -28,7 +39,16 @@ body {
   
   .jumbotron h1 {
     font-weight: 300;
+    color: #fff;
   }
+  .jumbotron h5 {
+    
+    color: #fff;
+  }
+  .jumbotron p {    
+    color: #fff !important;
+  }
+  
   
   .jumbotron .container {
     max-width: 60rem;
@@ -37,6 +57,7 @@ body {
   footer {
     padding-top: 3rem;
     padding-bottom: 3rem;
+    background-color: #201547 !important
   }
   
   footer p {
@@ -112,4 +133,9 @@ body {
 .portfolio-section {
     border-collapse: separate;
     border-spacing: 15px 50px;
+}
+
+
+.navbar-light .navbar-nav .nav-link {
+  color: #fff;
 }

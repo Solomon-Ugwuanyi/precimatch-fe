@@ -38,8 +38,8 @@ class Home extends Component {
                                         <Card height={24}>
                                             <Card.Img variant="top" src={talent.imageUrl} />
                                             <Card.Body>
-                                                <Card.Title>{talent.name} {talent.surname}</Card.Title>
-                                                <h2>{talent.headline}</h2>
+                                                <Card.Title className="line-clamp">{talent.name} {talent.surname}</Card.Title>
+                                                <h3>{talent.headline}</h3>
                                                 <Card.Text>{talent.techStack}
                                                 </Card.Text>
                                                 <Link style={{ border: 'none', background: '#008001', color: '#fff', fontSize: '14px' }} className="btn btn-primary" to={`/talent/${talent._id}`}>

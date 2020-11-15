@@ -7,8 +7,9 @@ export default function Jumbotron() {
             <section className="jumbotron text-center">
                 <div className="container">
                     <h1>Precise Matches</h1>
-                    <img src="https://miro.medium.com/max/2160/1*Dpb3vjQtqb4D1nAU4RnRWA@2x.png" />
                     <h5>Tinder for Developer Jobs</h5>
+                    <img src="https://miro.medium.com/max/2160/1*Dpb3vjQtqb4D1nAU4RnRWA@2x.png" />
+
                     <p className="lead text-muted">Scan through a carefully curated directory of job ready developers, equipped with industry best practices and latest stacks. See some projects you like? Shoot them an email!</p>
 
                     <Button style=
@@ -20,7 +21,7 @@ export default function Jumbotron() {
 
 
                         }}
-                        className="btn btn-primary " variant="outline-secondary">Sign in</Button>
+                        className="btn btn-primary mr-5 " variant="outline-secondary">Sign in</Button>
                     <Button style=
                         {{
                             border: 'none',
