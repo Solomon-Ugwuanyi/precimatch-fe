@@ -1,11 +1,12 @@
 import React from 'react'
 import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap'
+import {Link} from "react-router-dom";
 
-export default function MyNav() {
+export default function MyNav(props) {
     return (
         <div>
             <Navbar className="bg-dark" expand="lg">
-                <div className="container">
+                <div className="container-fluid d-flex justify-content-between">
                     <Navbar.Brand style={{ color: 'white' }} href="#home"><img src="././assets/logo1.png"></img><strong>PreciMatch</strong></Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
@@ -17,7 +18,13 @@ export default function MyNav() {
                             <FormControl type="text" placeholder="Search" className="mr-sm-3" />
                             <Button variant="outline-success">Search</Button>
                         </Form>
+                        {props.user &&
+                            <Link to={'/talent/'+props.user._id}>
+                                <Nav.Link href="#home">{props.user.email}</Nav.Link>
+                            </Link>
+                       }
                     </Navbar.Collapse>
+
 
                 </div>
 

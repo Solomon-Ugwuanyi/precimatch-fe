@@ -1,8 +1,19 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
-
-export default function Jumbotron() {
+import { Link } from "react-router-dom";
+import { withRouter } from 'react-router-dom';
+function Jumbotron(props) {
+    //
+    // const [id, setId] = React.useState(null)
+    // React.useEffect(()=>{
+    //     if(props.user) {
+    //         setId(props.user._id)
+    //     }
+    //
+    // },[id])
+    // console.log(props.match.params.id)
     return (
+
         <div>
             <section className="jumbotron text-center">
                 <div className="container">
@@ -11,28 +22,29 @@ export default function Jumbotron() {
                     <img src="https://miro.medium.com/max/2160/1*Dpb3vjQtqb4D1nAU4RnRWA@2x.png" />
 
                     <p className="lead text-muted">Scan through a carefully curated directory of job ready developers, equipped with industry best practices and latest stacks. See some projects you like? Shoot them an email!</p>
+                    {!props.user &&
+                        <>
+                            <Link to={'/login'}>
+                                <Button
+                                    className="sign-in mr-4" variant="outline-secondary">Sign in</Button>
+                            </Link>
 
-                    <Button style=
+                            <Link to={'/signUp'} >
+                                <Button className="sign-up" variant="outline-secondary">Sign Up</Button>
+                            </Link>
+                        </>
+                    }{props.user && props.match.params.id === props.user._id && <Button style=
                         {{
                             border: 'none',
                             background: '#008001',
                             color: '#fff',
                             fontSize: '14px',
 
-
-                        }}
-                        className="btn btn-primary mr-5 " variant="outline-secondary">Sign in</Button>
-                    <Button style=
-                        {{
-                            border: 'none',
-                            background: '#008001',
-                            color: '#fff',
-                            fontSize: '14px',
-
-                        }} variant="outline-secondary">Sign Up</Button>
+                        }} variant="outline-secondary">Edit</Button>}
 
                 </div>
             </section>
         </div>
     )
 }
+export default withRouter(Jumbotron)

@@ -5,6 +5,7 @@ import { Link, withRouter } from 'react-router-dom'
 import MyNav from './NavBar'
 import Footer from './Footer'
 import Jumbotron from './Jumbotron'
+import withAuth from "./withAuth";
 
 class Home extends Component {
 
@@ -14,7 +15,7 @@ class Home extends Component {
 
 
     componentDidMount = async () => {
-        const response = await fetch('http://localhost:4500/talents')
+        const response = await fetch(`${process.env.REACT_APP_URL}/talents`)
         const data = await response.json();
         this.setState({ talents: data })
     }
@@ -24,11 +25,11 @@ class Home extends Component {
     render() {
         return (
             <div >
-                <MyNav />
+                <MyNav user={this.props.user} />
 
-                <main role="main">
+                <main role="main" style={{ marginBottom: '180px' }}>
 
-                    <Jumbotron />
+                    <Jumbotron user={this.props.user} />
 
                     <div className="album py-5 bg-light">
                         <div className="container">
@@ -63,4 +64,4 @@ class Home extends Component {
     }
 }
 
-export default withRouter(Home);
+export default withAuth(withRouter(Home));

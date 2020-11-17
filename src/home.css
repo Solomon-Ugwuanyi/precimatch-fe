@@ -31,6 +31,8 @@ body {
       width: 100%;
       min-height: 50vh;
       object-fit: cover;
+      margin-bottom: 4rem;
+      border-radius: 50%;
   }
   
   .jumbotron p:last-child {
@@ -57,7 +59,10 @@ body {
   footer {
     padding-top: 3rem;
     padding-bottom: 3rem;
-    background-color: #201547 !important
+    background-color: #201547 !important;
+      /*position: fixed;
+      width: 100vw;
+      bottom: 0; */
   }
   
   footer p {
@@ -85,6 +90,26 @@ body {
       font-size: 1.4rem;
     }
   }
+
+  .project-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    transform: 5s;
+    border: solid 2px rgb(49, 33, 105);
+}
+
+.project-card:hover  {
+  transform: scale(1.05);
+  transition: 0.5s
+
+}
   
 
   .card:hover  {
@@ -108,23 +133,39 @@ body {
     
 }
 
-.section-header {
-    border: 1px solid black;
-    outline: #CCCCCC solid 3px;
-    text-align: justify;  
-    padding: 10px;
-    text-align: center;
-    margin-top: 2rem;
-    width: 100%;
-    margin-right: 0
+.sign-in {
+  border: none;
+  background: rgb(213 9 137);
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  padding: 0.75rem 2rem;
 }
 
-.project-pic {
-    border: solid 2px rgb(49, 33, 105);
-    padding: 5px;
-    background-color: #fff;
-    transform: 5s
+.sign-up {
+  border: none;
+  background: rgb(133 21 124);
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  padding: 0.75rem 2rem;
 }
+
+
+
+.section-header {
+  
+  text-align: justify;
+  padding: 10px;
+  text-align: center;
+  margin-top: 2rem;
+  color: white;
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 2rem;
+  margin-right: 0;
+  background: linear-gradient(45deg, #663c8b, #e3058c, #f77ec0);
+}
+
+
 
 .project-pic:hover {
     transform: scale(1.05)

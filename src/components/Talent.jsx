@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
-import { Row, Col, Image } from 'react-bootstrap'
+import { Row, Col, Image, Button, NavLink } from 'react-bootstrap'
 import MyNav from './NavBar'
 import Footer from './Footer'
 import Jumbotron from './Jumbotron'
 import { Link, withRouter } from 'react-router-dom'
+import withAuth from "./withAuth";
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import TwitterIcon from '@material-ui/icons/Twitter';
+import EmailIcon from '@material-ui/icons/Email';
 
 class Talent extends Component {
     state = {
@@ -30,10 +35,10 @@ class Talent extends Component {
         console.log("projects detals from talent page", this.state.projects)
         return (
             <div style={{}}>
-                <MyNav />
+                <MyNav user={this.props.user} />
                 <main role="main">
 
-                    <Jumbotron /> {/* Header/Jumbotron End */}
+                    <Jumbotron user={this.props.user} /> {/* Header/Jumbotron End */}
 
                     <div className="album py-5 bg-light">
                         <div className="container">
@@ -51,14 +56,20 @@ class Talent extends Component {
                                     <h2 className="half" >{this.state.talent.name} {this.state.talent.surname}</h2>
 
                                     <p className="half">
-                                        {this.state.talent.aboutMe}
+                                        {this.state.talent.about}
                                     </p>
 
                                 </Col>
                                 <Col xs={12} sm={6} md={3}>
-                                    <p className="three-quarters">
-                                        Loremm ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    </p>
+                                    <h2 className="" >Contact Me</h2>
+
+                                    <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                                        <NavLink href={this.state.talent.linkedinUrl}><LinkedInIcon /></NavLink>
+                                        <NavLink href={this.state.talent.linkedinUrl}><GitHubIcon /></NavLink>
+                                        <NavLink href={this.state.talent.linkedinUrl}><EmailIcon /></NavLink>
+                                        <NavLink href={this.state.talent.linkedinUrl}><TwitterIcon /></NavLink>
+                                    </div>
+
                                 </Col>
                             </Row>
 
@@ -69,7 +80,18 @@ class Talent extends Component {
                                     return (
                                         <>
                                             <Col key={i} xs={12} sm={6} md={4} >
-                                                <Image className="project-pic" width={346} height={240} src={project.projectImageUrl} rounded />
+                                                <div className="project-card" >
+                                                    <Image className="project-pic" width={346} height={240} src={project.projectImageUrl} />
+                                                    <div display="inline-block" >
+                                                        <h6 style={{ color: 'blue', textAlign: 'justify' }}>{project.projectName}</h6>
+                                                        <a href=""><GitHubIcon src={project.projectGithub} /></a>
+                                                        <Button height="5px" className="btn-primary sign-up"> Demo</Button>
+
+
+                                                    </div>
+                                                </div>
+
+
                                             </Col>
                                         </>
                                     )
@@ -92,4 +114,4 @@ class Talent extends Component {
     }
 }
 
-export default Talent;
+export default withAuth(withRouter(Talent));
