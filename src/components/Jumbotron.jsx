@@ -35,7 +35,7 @@ function Jumbotron(props) {
                                 <Button className="sign-up" variant="outline-secondary">Sign Up</Button>
                             </Link>
                         </>
-                    }{props.user && props.match.params.id === props.user._id && <ModalForm authorize={()=>props.authorize()}  user={props.user}/>}
+                    }{props.user && props.match.params.id === props.user._id && <ModalForm authorize={() => props.authorize()} user={props.user} />}
 
                 </div>
             </section>
