@@ -29,7 +29,7 @@ class Home extends Component {
 
                 <main role="main" style={{ marginBottom: '180px' }}>
 
-                    <Jumbotron user={this.props.user} />
+                    <Jumbotron user={this.props.user} authorize={()=>this.props.authorize()}/>
 
                     <div className="album py-5 bg-light">
                         <div className="container">

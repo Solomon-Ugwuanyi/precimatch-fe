@@ -38,7 +38,7 @@ class Talent extends Component {
                 <MyNav user={this.props.user} />
                 <main role="main">
 
-                    <Jumbotron user={this.props.user} /> {/* Header/Jumbotron End */}
+                    <Jumbotron user={this.props.user} authorize={()=>this.props.authorize()} /> {/* Header/Jumbotron End */}
 
                     <div className="album py-5 bg-light">
                         <div className="container">
@@ -69,6 +69,7 @@ class Talent extends Component {
                                         <NavLink href={this.state.talent.linkedinUrl}><EmailIcon /></NavLink>
                                         <NavLink href={this.state.talent.linkedinUrl}><TwitterIcon /></NavLink>
                                     </div>
+                                    <img style={{width:'200px'}} src={'https://i.pinimg.com/originals/16/02/b2/1602b26c05ee78120695d592a68b8912.gif'}/>
 
                                 </Col>
                             </Row>

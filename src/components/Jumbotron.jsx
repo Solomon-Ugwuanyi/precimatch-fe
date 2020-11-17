@@ -2,6 +2,8 @@ import React from 'react'
 import { Button } from 'react-bootstrap'
 import { Link } from "react-router-dom";
 import { withRouter } from 'react-router-dom';
+import Modal from "./Modal";
+import ModalForm from "./Modal";
 function Jumbotron(props) {
     //
     // const [id, setId] = React.useState(null)
@@ -33,14 +35,7 @@ function Jumbotron(props) {
                                 <Button className="sign-up" variant="outline-secondary">Sign Up</Button>
                             </Link>
                         </>
-                    }{props.user && props.match.params.id === props.user._id && <Button style=
-                        {{
-                            border: 'none',
-                            background: '#008001',
-                            color: '#fff',
-                            fontSize: '14px',
-
-                        }} variant="outline-secondary">Edit</Button>}
+                    }{props.user && props.match.params.id === props.user._id && <ModalForm authorize={()=>props.authorize()}  user={props.user}/>}
 
                 </div>
             </section>
