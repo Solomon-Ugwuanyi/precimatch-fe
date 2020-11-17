@@ -38,7 +38,7 @@ class Talent extends Component {
                 <MyNav user={this.props.user} />
                 <main role="main">
 
-                    <Jumbotron user={this.props.user} authorize={()=>this.props.authorize()} /> {/* Header/Jumbotron End */}
+                    <Jumbotron user={this.props.user} authorize={() => this.props.authorize()} /> {/* Header/Jumbotron End */}
 
                     <div className="album py-5 bg-light">
                         <div className="container">
@@ -69,7 +69,7 @@ class Talent extends Component {
                                         <NavLink href={this.state.talent.linkedinUrl}><EmailIcon /></NavLink>
                                         <NavLink href={this.state.talent.linkedinUrl}><TwitterIcon /></NavLink>
                                     </div>
-                                    <img style={{width:'200px'}} src={'https://i.pinimg.com/originals/16/02/b2/1602b26c05ee78120695d592a68b8912.gif'}/>
+                                    <img style={{ width: '200px' }} src={'https://i.pinimg.com/originals/16/02/b2/1602b26c05ee78120695d592a68b8912.gif'} />
 
                                 </Col>
                             </Row>
@@ -83,8 +83,8 @@ class Talent extends Component {
                                             <Col key={i} xs={12} sm={6} md={4} >
                                                 <div className="project-card" >
                                                     <Image className="project-pic" width={346} height={240} src={project.projectImageUrl} />
-                                                    <div display="inline-block" >
-                                                        <h6 style={{ color: 'blue', textAlign: 'justify' }}>{project.projectName}</h6>
+                                                    <div className={"d-flex justify-content-around"}>
+                                                        <span style={{ color: 'blue' }}>{project.projectName}</span>
                                                         <a href=""><GitHubIcon src={project.projectGithub} /></a>
                                                         <Button height="5px" className="btn-primary sign-up"> Demo</Button>
 
