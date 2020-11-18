@@ -23,6 +23,7 @@ const withAuth = (Component) => (props) => {
             });
 
             if (secondRes.status !== 200) {
+                setLoading(false)
             } else {
                 // sessionStorage.setItem("accessToken", secondRes.data.accessToken);
                 setUser(secondRes.data);
@@ -30,6 +31,7 @@ const withAuth = (Component) => (props) => {
             }
         } else {
             if (res.status !== 200) {
+                setLoading(false)
             } else {
                 // sessionStorage.setItem("accessToken", res.data.accessToken);
 
@@ -44,7 +46,7 @@ const withAuth = (Component) => (props) => {
         authorize();
 
     }, []);
-    return loading ? <div>Content is loading</div> : <Component user={user} authorize={()=>authorize()}/>
+    return loading ? <div>Content is loading</div> : <Component user={user} authorize={() => authorize()} />
 };
 
 

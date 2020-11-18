@@ -24,7 +24,7 @@ function Jumbotron(props) {
                     <img src="https://miro.medium.com/max/2160/1*Dpb3vjQtqb4D1nAU4RnRWA@2x.png" />
 
                     <p className="lead text-muted">Scan through a carefully curated directory of job ready developers, equipped with industry best practices and latest stacks. See some projects you like? Shoot them an email!</p>
-                    {!props.user &&
+                    {!props.user._id &&
                         <>
                             <Link to={'/login'}>
                                 <Button
@@ -35,7 +35,7 @@ function Jumbotron(props) {
                                 <Button className="sign-up" variant="outline-secondary">Sign Up</Button>
                             </Link>
                         </>
-                    }{props.user && props.match.params.id === props.user._id && <ModalForm authorize={() => props.authorize()} user={props.user} />}
+                    }{props.user._id && props.match.params.id === props.user._id && <ModalForm authorize={() => props.authorize()} user={props.user} />}
 
                 </div>
             </section>
