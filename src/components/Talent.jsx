@@ -43,7 +43,7 @@ class Talent extends Component {
                     <div className="album py-5 bg-light">
                         <div className="container">
                             <Row>
-                                <Col xs={12} sm={6} md={3} style={{ display: 'inline-block' }} >
+                                <Col className="col-auto" style={{ display: 'inline-block' }} >
                                     <Image style={{
                                         border: '1 px solid black',
                                         outline: '#CCCCCC solid 3px',
@@ -82,10 +82,12 @@ class Talent extends Component {
                                         <>
                                             <Col key={i} xs={12} sm={6} md={4} >
                                                 <div className="project-card" >
+                                                    <span style={{ color: 'purple' }}>{project.projectName}</span>
                                                     <Image className="project-pic" width={346} height={240} src={project.projectImageUrl} />
-                                                    <div className={"d-flex justify-content-around"}>
-                                                        <span style={{ color: 'blue' }}>{project.projectName}</span>
-                                                        <a href=""><GitHubIcon src={project.projectGithub} /></a>
+                                                    <div className={"d-flex justify-content-around py-3 pb-3"}>
+                                                        <Button>Git <a href=""><GitHubIcon src={project.projectGithub} /></a></Button>
+
+
                                                         <Button height="5px" className="btn-primary sign-up"> Demo</Button>
 
 

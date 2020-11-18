@@ -40,8 +40,9 @@ body {
   }
   
   .jumbotron h1 {
-    font-weight: 300;
+    font-weight: 800;
     color: #fff;
+    font-size: 68px;
   }
   .jumbotron h5 {
     
@@ -101,12 +102,13 @@ body {
     background-clip: border-box;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
-    transform: 5s;
-    border: solid 2px rgb(49, 33, 105);
+    transform: 4s;
+    border: 2px solid #312169;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3)
 }
 
 .project-card:hover  {
-  transform: scale(1.05);
+  transform: scale(1.1);
   transition: 0.5s
 
 }
@@ -180,5 +182,5 @@ body {
 
 
 .navbar-light .navbar-nav .nav-link {
-  color: #fff;
+  color: #ca008e
 }

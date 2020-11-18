@@ -20,10 +20,12 @@ function Jumbotron(props) {
             <section className="jumbotron text-center">
                 <div className="container">
                     <h1>Precise Matches</h1>
-                    <h5>Tinder for Developer Jobs</h5>
+                    <h5 className="mb-4">Tinder for Developer Jobs</h5>
                     <img src="https://miro.medium.com/max/2160/1*Dpb3vjQtqb4D1nAU4RnRWA@2x.png" />
 
-                    <p className="lead text-muted">Scan through a carefully curated directory of job ready developers, equipped with industry best practices and latest stacks. See some projects you like? Shoot them an email!</p>
+                    <p className="lead text-muted mb-4">Never lose an opportunity again due to downtime on your portfolio website. <br></br>
+                    Host your profile and project demos on Precimatch and recruiters who like them with contact you.<br></br>
+                    Be Visible with PreciMatch!</p>
                     {!props.user._id &&
                         <>
                             <Link to={'/login'}>
