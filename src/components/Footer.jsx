@@ -10,10 +10,6 @@ export default function Footer() {
                     <p className="float-right">
                         <a href="#">Back to top</a>
                     </p>
-                    <ArrowRight />
-
-
-
                     <p>PreciMatch is a &copy; PreciGroup. </p>
                     <p>New to Bootstrap? <a href="#">Visit the homepage</a> or read our <a
                         href="#">guidelines</a>.</p>
