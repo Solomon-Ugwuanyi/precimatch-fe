@@ -52,24 +52,24 @@ class Talent extends Component {
                                     }}
                                         src={this.state.talent.imageUrl} rounded />
                                 </Col>
-                                <Col xs={12} sm={6} md={6}>
+                                <Col xs={12} sm={12} md={6}>
                                     <h2 className="half" >{this.state.talent.name} {this.state.talent.surname}</h2>
 
                                     <p className="half">
                                         {this.state.talent.about}
                                     </p>
-
-                                </Col>
-                                <Col xs={12} sm={6} md={3}>
-                                    <h2 className="" >Contact Me</h2>
-
+                                    <h2 style="text-align: justify " >Contact Me</h2>
                                     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                                         <NavLink href={this.state.talent.linkedinUrl}><LinkedInIcon /></NavLink>
-                                        <NavLink href={this.state.talent.linkedinUrl}><GitHubIcon /></NavLink>
-                                        <NavLink href={this.state.talent.linkedinUrl}><EmailIcon /></NavLink>
+                                        <NavLink href={this.state.talent.githubUrl}><GitHubIcon /></NavLink>
+                                        <NavLink href={this.state.talent.email}><EmailIcon /></NavLink>
                                         <NavLink href={this.state.talent.linkedinUrl}><TwitterIcon /></NavLink>
                                     </div>
-                                    <img style={{ width: '200px' }} src={'https://i.pinimg.com/originals/16/02/b2/1602b26c05ee78120695d592a68b8912.gif'} />
+
+                                </Col>
+                                <Col xs={12} sm={12} md={12}>
+
+                                    <img style="width: 100%; border-radius: 2% " src={'https://cdn.eso.org/images/thumb300y/lasilla.jpg'} />
 
                                 </Col>
                             </Row>
@@ -85,7 +85,7 @@ class Talent extends Component {
                                                     <span style={{ color: 'purple' }}>{project.projectName}</span>
                                                     <Image className="project-pic" width={346} height={240} src={project.projectImageUrl} />
                                                     <div className={"d-flex justify-content-around py-3 pb-3"}>
-                                                        <Button>Git <a href=""><GitHubIcon src={project.projectGithub} /></a></Button>
+                                                        <Button style="background-color: rgb(133 21 124); border-color: rgb(133 21 124); fontSize: 14px;" >Git <a href=""><GitHubIcon style="fontSize: 1rem" src={project.projectGithub} /></a></Button>
 
 
                                                         <Button height="5px" className="btn-primary sign-up"> Demo</Button>

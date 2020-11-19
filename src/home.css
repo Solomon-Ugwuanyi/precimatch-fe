@@ -123,8 +123,7 @@ body {
   .half {
     float: left;
     width: 100%;
-    margin: 10px;
-    padding-left: 8rem;
+    margin: 10px;    
     text-align: justify;
 }
 

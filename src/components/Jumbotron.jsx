@@ -29,6 +29,7 @@ function Jumbotron(props) {
                     {!props.user._id &&
                         <>
                             <Link to={'/login'}>
+
                                 <Button
                                     className="sign-in mr-4" variant="outline-secondary">Sign in</Button>
                             </Link>
