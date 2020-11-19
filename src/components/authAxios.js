@@ -23,7 +23,7 @@ authAxios.interceptors.response.use(
 
             return axios
                 .post(
-                    `${process.env.REACT_APP_BE_URL}/talents/refreshToken`,
+                    `${process.env.REACT_APP_URL}/talents/refreshToken`,
                     {},
                     { withCredentials: true }
                 )
