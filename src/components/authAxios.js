@@ -23,13 +23,13 @@ authAxios.interceptors.response.use(
 
             return axios
                 .post(
-                    `${process.env.REACT_APP_URL}/talents/refreshToken`,
+                    `${process.env.REACT_APP_BE_URL}/talents/refreshToken`,
                     {},
                     { withCredentials: true }
                 )
                 .then((res) => {
                     if (res.status === 200) {
-                        // sssessionStorage.setItem("accessToken", res.data.accessToken);
+                        // sessionStorage.setItem("accessToken", res.data.accessToken);
 
                         return Promise.resolve(res);
                     }

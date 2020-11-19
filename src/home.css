@@ -40,9 +40,8 @@ body {
   }
   
   .jumbotron h1 {
-    font-weight: 800;
+    font-weight: 300;
     color: #fff;
-    font-size: 68px;
   }
   .jumbotron h5 {
     
@@ -102,13 +101,12 @@ body {
     background-clip: border-box;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
-    transform: 4s;
-    border: 2px solid #312169;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.3)
+    transform: 5s;
+    border: solid 2px rgb(49, 33, 105);
 }
 
 .project-card:hover  {
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition: 0.5s
 
 }
@@ -123,7 +121,8 @@ body {
   .half {
     float: left;
     width: 100%;
-    margin: 10px;    
+    margin: 10px;
+    padding-left: 8rem;
     text-align: justify;
 }
 
@@ -181,5 +180,5 @@ body {
 
 
 .navbar-light .navbar-nav .nav-link {
-  color: #ca008e
+  color: #fff;
 }

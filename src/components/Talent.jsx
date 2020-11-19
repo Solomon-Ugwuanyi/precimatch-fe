@@ -34,7 +34,7 @@ class Talent extends Component {
         console.log("talent detals from talent page", this.state.talent)
         console.log("projects detals from talent page", this.state.projects)
         return (
-            <div >
+            <div style={{}}>
                 <MyNav user={this.props.user} />
                 <main role="main">
 
@@ -43,7 +43,7 @@ class Talent extends Component {
                     <div className="album py-5 bg-light">
                         <div className="container">
                             <Row>
-                                <Col className="col-auto" style={{ display: 'inline-block' }} >
+                                <Col xs={12} sm={6} md={3} style={{ display: 'inline-block' }} >
                                     <Image style={{
                                         border: '1 px solid black',
                                         outline: '#CCCCCC solid 3px',
@@ -52,24 +52,24 @@ class Talent extends Component {
                                     }}
                                         src={this.state.talent.imageUrl} rounded />
                                 </Col>
-                                <Col xs={12} sm={12} md={6}>
+                                <Col xs={12} sm={6} md={6}>
                                     <h2 className="half" >{this.state.talent.name} {this.state.talent.surname}</h2>
 
                                     <p className="half">
                                         {this.state.talent.about}
                                     </p>
-                                    <h2 style={{ textAlign: 'justify' }} >Contact Me</h2>
-                                    <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                                        <NavLink href={this.state.talent.linkedinUrl}><LinkedInIcon /></NavLink>
-                                        <NavLink href={this.state.talent.githubUrl}><GitHubIcon /></NavLink>
-                                        <NavLink href={this.state.talent.email}><EmailIcon /></NavLink>
-                                        <NavLink href={this.state.talent.linkedinUrl}><TwitterIcon /></NavLink>
-                                    </div>
 
                                 </Col>
-                                <Col xs={12} sm={12} md={12}>
+                                <Col xs={12} sm={6} md={3}>
+                                    <h2 className="" >Contact Me</h2>
 
-                                    <img style={{ width: '100%', borderRadius: '2%' }} src={'https://cdn.eso.org/images/thumb300y/lasilla.jpg'} alt="just a panorama pix" />
+                                    <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                                        <NavLink href={this.state.talent.linkedinUrl}><LinkedInIcon /></NavLink>
+                                        <NavLink href={this.state.talent.linkedinUrl}><GitHubIcon /></NavLink>
+                                        <NavLink href={this.state.talent.linkedinUrl}><EmailIcon /></NavLink>
+                                        <NavLink href={this.state.talent.linkedinUrl}><TwitterIcon /></NavLink>
+                                    </div>
+                                    <img style={{ width: '200px' }} src={'https://i.pinimg.com/originals/16/02/b2/1602b26c05ee78120695d592a68b8912.gif'} />
 
                                 </Col>
                             </Row>
@@ -82,12 +82,10 @@ class Talent extends Component {
                                         <>
                                             <Col key={i} xs={12} sm={6} md={4} >
                                                 <div className="project-card" >
-                                                    <span style={{ color: 'purple' }}>{project.projectName}</span>
                                                     <Image className="project-pic" width={346} height={240} src={project.projectImageUrl} />
-                                                    <div className={"d-flex justify-content-around py-3 pb-3"}>
-                                                        <Button style={{ backgroundColor: 'rgb(133 21 124)', borderColor: 'rgb(133 21 124)', fontSize: '14px' }}  >Git <a href={project.projectGithub}><GitHubIcon style={{ fontSize: '1rem' }} src={project.projectGithub} /></a></Button>
-
-
+                                                    <div className={"d-flex justify-content-around"}>
+                                                        <span style={{ color: 'blue' }}>{project.projectName}</span>
+                                                        <a href=""><GitHubIcon src={project.projectGithub} /></a>
                                                         <Button height="5px" className="btn-primary sign-up"> Demo</Button>
 
 

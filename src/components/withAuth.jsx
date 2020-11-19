@@ -7,7 +7,7 @@ const withAuth = (Component) => (props) => {
     const [loading, setLoading] = React.useState(true)
     const authorize = async () => {
         setLoading(true)
-        const res = await axios.get(`${process.env.REACT_APP_URL}/talents/me`, {
+        const res = await authAxios.get(`/talents/me`, {
             withCredentials: true,
             // httpOnly: true,
             // sameSite: "none",
