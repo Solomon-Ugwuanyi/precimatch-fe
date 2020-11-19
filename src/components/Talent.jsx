@@ -34,7 +34,7 @@ class Talent extends Component {
         console.log("talent detals from talent page", this.state.talent)
         console.log("projects detals from talent page", this.state.projects)
         return (
-            <div style={{}}>
+            <div >
                 <MyNav user={this.props.user} />
                 <main role="main">
 
