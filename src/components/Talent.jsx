@@ -58,7 +58,7 @@ class Talent extends Component {
                                     <p className="half">
                                         {this.state.talent.about}
                                     </p>
-                                    <h2 style="text-align: justify " >Contact Me</h2>
+                                    <h2 style={{ textAlign: 'justify' }} >Contact Me</h2>
                                     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                                         <NavLink href={this.state.talent.linkedinUrl}><LinkedInIcon /></NavLink>
                                         <NavLink href={this.state.talent.githubUrl}><GitHubIcon /></NavLink>
@@ -69,7 +69,7 @@ class Talent extends Component {
                                 </Col>
                                 <Col xs={12} sm={12} md={12}>
 
-                                    <img style="width: 100%; border-radius: 2% " src={'https://cdn.eso.org/images/thumb300y/lasilla.jpg'} />
+                                    <img style={{ width: '100%', borderRadius: '2%' }} src={'https://cdn.eso.org/images/thumb300y/lasilla.jpg'} alt="just a panorama pix" />
 
                                 </Col>
                             </Row>
@@ -85,7 +85,7 @@ class Talent extends Component {
                                                     <span style={{ color: 'purple' }}>{project.projectName}</span>
                                                     <Image className="project-pic" width={346} height={240} src={project.projectImageUrl} />
                                                     <div className={"d-flex justify-content-around py-3 pb-3"}>
-                                                        <Button style="background-color: rgb(133 21 124); border-color: rgb(133 21 124); fontSize: 14px;" >Git <a href=""><GitHubIcon style="fontSize: 1rem" src={project.projectGithub} /></a></Button>
+                                                        <Button style={{ backgroundColor: 'rgb(133 21 124)', borderColor: 'rgb(133 21 124)', fontSize: '14px' }}  >Git <a href={project.projectGithub}><GitHubIcon style={{ fontSize: '1rem' }} src={project.projectGithub} /></a></Button>
 
 
                                                         <Button height="5px" className="btn-primary sign-up"> Demo</Button>
