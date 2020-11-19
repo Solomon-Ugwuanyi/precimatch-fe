@@ -43,50 +43,47 @@ class Talent extends Component {
                     <div className="album py-5 bg-light">
                         <div className="container">
                             <Row>
-                                <Col xs={12} sm={6} md={3} style={{ display: 'inline-block' }} >
-                                    <Image style={{
+                                <Col xs={12} sm={6} md={6} style={{ display: 'inline-block' }} >
+                                    <Image className="col-auto" style={{
                                         border: '1 px solid black',
                                         outline: '#CCCCCC solid 3px',
                                         width: '388px',
-                                        height: '388px'
+                                        height: '388px',
+                                        padding: '0',
+                                        alignItems: 'justify'
                                     }}
                                         src={this.state.talent.imageUrl} rounded />
                                 </Col>
-                                <Col xs={12} sm={6} md={6}>
+                                <Col xs={12} sm={12} md={6}>
                                     <h2 className="half" >{this.state.talent.name} {this.state.talent.surname}</h2>
 
                                     <p className="half">
                                         {this.state.talent.about}
                                     </p>
-
-                                </Col>
-                                <Col xs={12} sm={6} md={3}>
-                                    <h2 className="" >Contact Me</h2>
-
-                                    <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                                        <NavLink href={this.state.talent.linkedinUrl}><LinkedInIcon /></NavLink>
-                                        <NavLink href={this.state.talent.linkedinUrl}><GitHubIcon /></NavLink>
-                                        <NavLink href={this.state.talent.linkedinUrl}><EmailIcon /></NavLink>
-                                        <NavLink href={this.state.talent.linkedinUrl}><TwitterIcon /></NavLink>
+                                    <h2 className="text-left" > Contact Me</h2>
+                                    <div style={{ display: 'flex', }}>
+                                        <NavLink className="pl-0" href={this.state.talent.linkedinUrl}><LinkedInIcon /></NavLink>
+                                        <NavLink className="pl-0" href={this.state.talent.githubUrl}><GitHubIcon /></NavLink>
+                                        <NavLink className="pl-0" href={this.state.talent.email}><EmailIcon /></NavLink>
+                                        <NavLink className="pl-0" href={this.state.talent.linkedinUrl}><TwitterIcon /></NavLink>
                                     </div>
-                                    <img style={{ width: '200px' }} src={'https://i.pinimg.com/originals/16/02/b2/1602b26c05ee78120695d592a68b8912.gif'} />
-
                                 </Col>
+
                             </Row>
 
-                            <h1 className="section-header">My Portfolio</h1>
+                            <h2 className="section-header">My Portfolio</h2>
 
                             <Row className="portfolio-section" >
                                 {this.state.projects.map((project, i) => {
                                     return (
                                         <>
                                             <Col key={i} xs={12} sm={6} md={4} >
-                                                <div className="project-card" >
+                                                <div className="project-card my-2" >
+                                                    <span style={{ color: 'blue' }}>{project.projectName}</span>
                                                     <Image className="project-pic" width={346} height={240} src={project.projectImageUrl} />
                                                     <div className={"d-flex justify-content-around"}>
-                                                        <span style={{ color: 'blue' }}>{project.projectName}</span>
-                                                        <a href=""><GitHubIcon src={project.projectGithub} /></a>
-                                                        <Button height="5px" className="btn-primary sign-up"> Demo</Button>
+                                                        <Button style={{ backgroundColor: "#e3058c", fontSize: "14px" }}  >Git <a href=""><GitHubIcon style={{ fontSize: '1rem' }} src={project.projectGithub} /></a></Button>
+                                                        <Button href="https://precimatch-fe.herokuapp.com/" height="5px" className="btn-primary sign-up"> Demo</Button>
 
 
                                                     </div>
