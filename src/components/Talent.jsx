@@ -82,7 +82,7 @@ class Talent extends Component {
                                                     <span style={{ color: 'blue' }}>{project.projectName}</span>
                                                     <Image className="project-pic" width={346} height={240} src={project.projectImageUrl} />
                                                     <div className={"d-flex justify-content-around"}>
-                                                        <Button style={{ backgroundColor: "#e3058c", fontSize: "14px" }}  >Git <a href=""><GitHubIcon style={{ fontSize: '1rem' }} src={project.projectGithub} /></a></Button>
+                                                        <Button style={{ backgroundColor: "#e3058c", fontSize: "14px" }}  >Git <a href="https://github.com/solomon-ugwuanyi"><GitHubIcon style={{ fontSize: '1rem' }} src={project.projectGithub} /></a></Button>
                                                         <Button href="https://precimatch-fe.herokuapp.com/" height="5px" className="btn-primary sign-up"> Demo</Button>
 
 
